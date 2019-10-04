@@ -23,6 +23,8 @@ var carDetails = {
 
 //Code Here
 
+const {color, make, model, year} = carDetails;
+
 
 
 ////////// PROBLEM 2 //////////
@@ -35,11 +37,13 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  const {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
+
+
 
 
 
@@ -54,6 +58,20 @@ function greeting( obj ) {
 */
 
 //Code Here
+
+// let propNames = {
+//   utah: 3, 
+//   california: 2, 
+//   texas: 4, 
+//   arizona: 1
+// }
+
+let newTotal = 0
+
+function totalPopulation(obj) {
+  const {utah: 3, california: 2, texas: 4, arizona: 1} = obj
+  
+}
 
 
 
