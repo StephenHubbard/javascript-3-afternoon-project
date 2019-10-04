@@ -53,17 +53,19 @@ var employees = [
 //Code Here
 
 function employeeUpdater(){
-    for (let key in employees) {
-      for (let key2 in employees) {
-        if (firstName[key2] === "Theo") {
-          delete key
+      for (let i = employees.length - 1; i >= 0; i--){
+        // console.log(employees[i].firstName)
+        if (employees[i].firstName === "Theo") {
+            employees.splice(i, 1)
+        } else if (employees[i].firstName === "Lorie") {
+            employees[i].department = "HR"
+          }       
         }
-        if (firstName[key2] === "Lorie") {
-          department[key2] = "HR"
-        }
+        // console.log(employees)
+        return employees
       }
-  }
-}
+    
+
 
 
 
@@ -82,6 +84,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
+
+
+function removeDuplicates(arr){
+  for (let i = workplaceAccidents.length - 1; i >= 0; i--) {
+    for (let j = i - 1; j >= 0; j--) {
+      if (workplaceAccidents[i] === workplaceAccidents[j]) {
+        workplaceAccidents.splice(i, 1)
+      }
+    }
+  }
+  return workplaceAccidents;
+}
 
 
 
