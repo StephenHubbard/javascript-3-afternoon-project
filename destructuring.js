@@ -59,17 +59,18 @@ function greeting( obj ) {
 
 //Code Here
 
-// let propNames = {
-//   utah: 3, 
-//   california: 2, 
-//   texas: 4, 
-//   arizona: 1
-// }
+let propNames = {
+  utah: 3, 
+  california: 2, 
+  texas: 4, 
+  arizona: 1
+}
 
 let newTotal = 0
 
 function totalPopulation(obj) {
-  const {utah: 3, california: 2, texas: 4, arizona: 1} = obj
+  const {utah, california, texas, arizona} = obj
+  return (utah + california + texas + arizona)
   
 }
 
