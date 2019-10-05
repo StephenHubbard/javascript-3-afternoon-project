@@ -88,6 +88,15 @@ function totalPopulation(obj) {
 
 //Code Here
 
+function ingredients(obj){
+  let newArr = []
+  const {carb, fat, protein} = obj
+  newArr.push(carb, fat, protein)
+  // console.log(newArr)
+  return newArr
+}
+
+
 
 
 ////////// PROBLEM 5 //////////
@@ -106,6 +115,12 @@ function totalPopulation(obj) {
 
 //Code Here
 
+function largeNumbers({first, second, third}) {
+  if (first < second && first < third) return first;
+  if (second < first && second < third) return second;
+  if (third < first && third < first) return third;
+}
+
 
 
 ////////// PROBLEM 6 //////////
@@ -117,5 +132,12 @@ function totalPopulation(obj) {
 */
 
 //Code Here
+
+function numberGroups ({a, b, c}) {
+  if (a.length > b.length && a.length > c.length) return a;
+  if (b.length > a.length && b.length > c.length) return b;
+  if (c.length > a.length && c.length > b.length) return c;
+
+}
 
 
