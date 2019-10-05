@@ -63,7 +63,9 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 //Code Here
-let totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+let totalPopulation = populations.reduce(function (acc, el) {
+  return (acc + el);
+});
 
 
 
@@ -89,7 +91,7 @@ const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulb
 */
 
 //Code Here
-let myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
+let myStrongest = monstersInYourPocket.filter((el, i, arr) => arr[i].CP >= 200 ? true : false)
 
 
 
@@ -106,7 +108,7 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
   Use a higher order method to get all the order totals after adding in the sales tax. Your answer should be an array of numbers, one total for each order.
 */
 
-let orderTotals // Code here
+let orderTotals = orders.map((el, i, arr) => arr[i].price * (1 + arr[i].tax))
 
 
 
@@ -126,6 +128,11 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
   Use a high order method to create to get the sum of bobsTotal.
 */
 
-let bobsTotal //Code Here
+let bobsTotal = purchases.reduce((acc, el) => {
+  if (el.owner === 'Bob') {
+    acc += el.price;
+  }
+  return acc
+}, 0)
 
 
